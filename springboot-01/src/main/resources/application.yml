@@ -1,0 +1,22 @@
+name: myBeanTest
+spring:
+  devtools:
+    livereload:
+      enabled: false #设置自动部署为false
+  datasource:
+    url: jdbc:mysql://localhost:3306/dbName?useUnicode=true&useSSL=true
+
+#随机配置文件
+my:
+  random:
+    secret: ${random.value}
+    number: ${random.int}
+    bignumber: ${random.long}
+    uuid: ${random.uuid}
+    number.less.than.ten: ${random.int(10)}
+    number.in.range: ${random.int[1024,65536]}
+
+mytest:
+  servers:
+            - dev.example.com
+            - another.example.com

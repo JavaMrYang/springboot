@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tcloudata.system.dao.ModeldefineDao">
+
+	<select id="get" resultType="com.tcloudata.system.domain.ModeldefineDO">
+		select `ID`,`PARENT_ID`,`FULL_PATH`,`NODE_TYPE`,`NAME`,`ENG_NAME`,`IS_DIM_TABLE`,
+		case `MODEL_CLASS` when '0' THEN '全量表' else '增量表' end as MODEL_CLASS,
+		`DESC_INFO`,`STATUS`,`IS_DEL`,
+		DATA_TYPE
+		from tags_modeldefine where ID = #{value}
+	</select>
+
+	<select id="list" resultType="com.tcloudata.system.domain.ModeldefineDO">
+		select a.`ID`,a.`PARENT_ID`,a.`FULL_PATH`,a.`NODE_TYPE`,a.`NAME`,a.`ENG_NAME`,a.`IS_DIM_TABLE`,
+				case a.`MODEL_CLASS` when '0' THEN '全量表' else '增量表' end as MODEL_CLASS,
+				a.`DESC_INFO`,a.`STATUS`,a.`IS_DEL`,
+				a.`DATA_TYPE`
+				from tags_modeldefine a
+        <where>
+			a.IS_DEL = 0
+			<if test="id != null and id != ''"> and a.ID = #{id} </if>
+			<if test="parentId != null and parentId != ''"> and a.PARENT_ID = #{parentId} </if>
+			<if test="fullPath != null and fullPath != ''"> and a.FULL_PATH = #{fullPath} </if>
+			<if test="nodeType != null and nodeType != ''"> and a.NODE_TYPE = #{nodeType} </if>
+			<if test="name != null and name != ''"> and a.NAME = #{name} </if>
+			<if test="engName != null and engName != ''"> and a.ENG_NAME = #{engName} </if>
+			<if test="modelClass != null and modelClass != ''"> and a.MODEL_CLASS = #{modelClass} </if>
+			<if test="descInfo != null and descInfo != ''"> and a.DESC_INFO = #{descInfo} </if>
+			<if test="status != null and status != ''"> and a.STATUS = #{status} </if>
+			<if test="isDimTable != null and isDimTable != ''"> and a.IS_DIM_TABLE = #{status} </if>
+		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by ID
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+ 	<select id="count" resultType="int">
+		select count(*) from tags_modeldefine a
+		<where>
+			a.IS_DEL = 0
+			<if test="roleIds != null and roleIds != ''">and a.id = b.model_id and b.role_id in
+				<foreach item="roleId" collection="roleIds" open="(" separator="," close=")">
+				  #{roleId}
+				</foreach>
+			</if>
+			<if test="id != null and id != ''"> and a.ID = #{id} </if>
+			<if test="parentId != null and parentId != ''"> and a.PARENT_ID = #{parentId} </if>
+			<if test="fullPath != null and fullPath != ''"> and a.FULL_PATH = #{fullPath} </if>
+			<if test="nodeType != null and nodeType != ''"> and a.NODE_TYPE = #{nodeType} </if>
+			<if test="name != null and name != ''"> and a.NAME = #{name} </if>
+			<if test="engName != null and engName != ''"> and a.ENG_NAME = #{engName} </if>
+			<if test="modelClass != null and modelClass != ''"> and a.MODEL_CLASS = #{modelClass} </if>
+			<if test="descInfo != null and descInfo != ''"> and a.DESC_INFO = #{descInfo} </if>
+			<if test="status != null and status != ''"> and a.STATUS = #{status} </if>
+			<if test="isDimTable != null and isDimTable != ''"> and IS_DIM_TABLE = #{isDimTable} </if>
+		</where>
+	</select>
+
+	<select id="findRelation" resultType="com.tcloudata.system.domain.ModeldefineDO">
+		SELECT * from tags_modeldefine
+		where name not in (${value}) and id in
+		(SELECT RIGHT_MODEL_ID as MODEL_ID FROM tags_modelrelation where LEFT_MODEL_ID in (SELECT id from tags_modeldefine where name in (${value}))
+		union
+		SELECT LEFT_MODEL_ID as MODEL_ID FROM tags_modelrelation where RIGHT_MODEL_ID in (SELECT id from tags_modeldefine where name in (${value}))
+		)
+	</select>
+
+	<insert id="save" parameterType="com.tcloudata.system.domain.ModeldefineDO" useGeneratedKeys="true" keyProperty="id">
+		insert into tags_modeldefine
+		(
+			`PARENT_ID`,
+			`FULL_PATH`,
+			`NODE_TYPE`,
+			`NAME`,
+			`ENG_NAME`,
+			`MODEL_CLASS`,
+			`DESC_INFO`,
+			`STATUS`,
+			`IS_DEL`,
+			`IS_DIM_TABLE`,
+			DATA_TYPE
+		)
+		values
+		(
+			#{parentId},
+			#{fullPath},
+			#{nodeType},
+			#{name},
+			#{engName},
+			0,
+			#{descInfo},
+			1,
+			0,
+			#{isDimTable},
+			#{dataType}
+		)
+	</insert>
+
+	<update id="update" parameterType="com.tcloudata.system.domain.ModeldefineDO">
+		update tags_modeldefine
+		<set>
+			<if test="parentId != null">`PARENT_ID` = #{parentId}, </if>
+			<if test="fullPath != null">`FULL_PATH` = #{fullPath}, </if>
+			<if test="nodeType != null">`NODE_TYPE` = #{nodeType}, </if>
+			<if test="name != null">`NAME` = #{name}, </if>
+			<if test="engName != null">`ENG_NAME` = #{engName}, </if>
+			<!-- <if test="modelClass != null">`MODEL_CLASS` = #{modelClass}, </if> -->
+			<if test="descInfo != null">`DESC_INFO` = #{descInfo}, </if>
+			<if test="status != null">`STATUS` = #{status}, </if>
+			<if test="isDel != null">`IS_DEL` = #{isDel},</if>
+			<if test="isDimTable != null">`IS_DIM_TABLE` = #{isDimTable},</if>
+			<if test="dataType != null">`DATA_TYPE` = #{dataType}</if>
+		</set>
+		where ID = #{id}
+	</update>
+
+	<delete id="remove">
+		delete from tags_modeldefine where ID = #{value}
+	</delete>
+
+	<delete id="batchRemove">
+		delete from tags_modeldefine where ID in
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+	<select id="match" resultType="com.tcloudata.system.domain.ModeldefineDO">
+		select a.`ID`,a.`PARENT_ID`,a.`FULL_PATH`,a.`NODE_TYPE`,a.`NAME`,a.`ENG_NAME`,a.`IS_DIM_TABLE`,
+				case a.`MODEL_CLASS` when '0' THEN '全量表' else '增量表' end as MODEL_CLASS,
+				a.`DESC_INFO`,a.`STATUS`,a.`IS_DEL`,
+				a.DATA_TYPE
+				from tags_modeldefine a
+		<where>
+			a.IS_DEL = 0 and NODE_TYPE=1
+			and	CONCAT(
+					IFNULL(a.`NAME`,''),
+					IFNULL(a.`ENG_NAME`,''),
+					IFNULL(a.`DESC_INFO`,''),
+					<!-- IFNULL(case a.`MODEL_CLASS` when '0' THEN '全量表' else '增量表' end,'' ), -->
+					''
+			    ) LIKE CONCAT('%',#{key},'%')
+		 </where>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+
+	<select id="matchcount" resultType="int">
+		select count(*) from tags_modeldefine a
+		<where>
+			a.IS_DEL = 0 and NODE_TYPE=1
+			and CONCAT(
+				   IFNULL(a.`NAME`,''),
+				   IFNULL(a.`ENG_NAME`,''),
+				   IFNULL(a.`DESC_INFO`,''),
+				   <!-- IFNULL(case a.`MODEL_CLASS` when '0' THEN '全量表' else '增量表' end,'' ), -->
+				   ''
+				   ) LIKE CONCAT('%',#{key},'%')
+		 </where>
+	</select>
+
+	<select id="getModeldefineInfo" resultType="com.tcloudata.system.domain.ModeldefineInfoDO">
+		select  LOWER(a.code) as code,
+			LOWER(a.code) as id,
+			c.name as modelName,
+			a.name as name,
+			c.id as modelId,
+			b.order_num as orderNum,
+			b.MAIN_KEY as mainKey
+		from tags_modelfield a, tags_modeldatafield b, tags_modeldefine c
+		where a.ID=b.FIELD_ID and b.MODEL_ID =c.ID and LOWER(c.ENG_NAME) = lower(#{modelId})
+		order by b.ORDER_NUM
+	</select>
+
+	<select id="getInfoByDimTable" resultType="HashMap">
+		select a.id , a.name from tags_modeldefine a where a.`IS_DIM_TABLE` = 1;
+	</select>
+
+	<select id="getModeldeDimInfo" resultType="com.tcloudata.system.domain.ModeldefineInfoDO">
+		select
+		  lower(CONCAT(dim_table.ORIG_FIELD, '_dim' ,y.CODE)) as code,
+		  CONCAT(ORIG_NAME, '-', y.NAME) as name
+		from tags_modeldatafield x, tags_modelfield y,
+		  ( select b.DIM_TABLE_ID, b.CODE as ORIG_FIELD, b.NAME as ORIG_NAME
+			from tags_modeldatafield a, tags_modelfield b
+			where a.FIELD_ID=b.ID and a.MODEL_ID = #{modelId} and b.DIM_TABLE_ID != 0)
+			as dim_table
+		where x.FIELD_ID=y.ID
+			  and x.MODEL_ID = dim_table.DIM_TABLE_ID
+		UNION ALL
+		select
+		  lower(CONCAT(std_table.ORIG_FIELD, '_stdname')) as code,
+		  CONCAT(ORIG_NAME, '-标准代码') as name
+		from tags_modeldatafield x, tags_modelfield y,tags_stditemtab z,
+		  ( select b.STD_CODE, b.CODE as ORIG_FIELD, b.NAME as ORIG_NAME
+			from tags_modeldatafield a, tags_modelfield b
+			where a.FIELD_ID=b.ID and a.MODEL_ID = #{modelId} and b.STD_CODE !='')
+			as std_table
+		where x.FIELD_ID=y.ID
+			and y.std_code = std_table.std_code
+			and z.item = std_table.std_code
+	</select>
+
+	<select id="getRelationModel" resultType="com.tcloudata.system.domain.ModeldefineDO">
+		select a.`ID`,a.`PARENT_ID`,a.`FULL_PATH`,a.`NODE_TYPE`,a.`NAME`,a.`ENG_NAME`,a.`IS_DIM_TABLE`,
+				case a.`MODEL_CLASS` when '0' THEN '全量表' else '增量表' end as MODEL_CLASS,
+				a.`DESC_INFO`,a.`STATUS`,a.`IS_DEL` from tags_modeldefine a
+		where id IN (
+			SELECT DISTINCT(ID) from
+			(SELECT LEFT_MODEL_ID as ID from tags_modelrelation where RIGHT_MODEL_ID = #{value}
+			UNION
+			SELECT RIGHT_MODEL_ID as ID from tags_modelrelation where LEFT_MODEL_ID = #{value}
+			) as t
+		) or NODE_TYPE=0
+		ORDER by ID
+	</select>
+
+</mapper>
