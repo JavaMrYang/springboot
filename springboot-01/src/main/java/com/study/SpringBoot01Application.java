@@ -4,9 +4,8 @@ import com.study.config.BannerConfig;
 import com.study.config.MyBean;
 import com.study.config.MyTestPropertiries;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @EnableAutoConfiguration
+@SpringBootConfiguration
 @ComponentScan
 public class SpringBoot01Application {
 
@@ -35,6 +35,7 @@ public class SpringBoot01Application {
         System.out.println(myTestPropertiries.getServers());
         return HELLO+" world";
     }
+
 
     public static void main(String[] args) throws Exception{
         //SpringApplication.run(SpringBoot01Application.class,args);

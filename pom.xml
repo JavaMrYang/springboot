@@ -28,4 +28,11 @@
         <junit.version>4.12</junit.version>
         <admin-server.version>1.5.7</admin-server.version>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
+    </dependencies>
 </project>
