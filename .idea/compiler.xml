@@ -6,16 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springboot-mybatis" />
         <module name="spring-eserach" />
-        <module name="springboot-01" />
         <module name="springboot-redis" />
+        <module name="springboot-01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-eserach" target="1.8" />
       <module name="springboot" target="1.8" />
       <module name="springboot-01" target="1.8" />
+      <module name="springboot-mybatis" target="1.8" />
       <module name="springboot-redis" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-eserach" options="-parameters" />
+      <module name="springboot-01" options="-parameters" />
+      <module name="springboot-mybatis" options="-parameters" />
+      <module name="springboot-redis" options="-parameters" />
+    </option>
   </component>
 </project>

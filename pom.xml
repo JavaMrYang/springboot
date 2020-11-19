@@ -12,6 +12,7 @@
         <module>springboot-redis</module>
         <module>spring-eserach</module>
         <module>springboot-01</module>
+        <module>springboot-mybatis</module>
     </modules>
     <packaging>pom</packaging>
 

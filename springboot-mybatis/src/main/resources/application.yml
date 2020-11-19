@@ -1,0 +1,7 @@
+mybatis:
+  datasource:
+    basename: mybatis-01
+     url: jdbc:mysql://localhost:3306/dbName?useUnicode=true&useSSL=true
+     name: root
+     password: root123
+     driverClass: com.mysql.cj.jdbc.Driver
