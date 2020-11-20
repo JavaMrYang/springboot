@@ -59,7 +59,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576897fd-0f4c-4f43-9652-99f756c40594" name="Default Changelist" comment="update code" />
+    <list default="true" id="576897fd-0f4c-4f43-9652-99f756c40594" name="Default Changelist" comment="update code">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_core_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_jul_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_slf4j_impl_2_13_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j2_2_3_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-mybatis/src/test/java/com/study/utils/IOUtilsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springboot-mybatis/text.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -102,19 +115,17 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-10" />
-    <option name="width" value="1935" />
-    <option name="height" value="1040" />
-  </component>
   <component name="ProjectId" id="1kULFUHBYxTzN6HavzgKiuVuASq" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -130,7 +141,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -140,14 +151,35 @@
       <recent name="D:\ly\springboot\springboot-01\src\main\java\com\study\bean" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBoot01Application">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager" selected="JUnit.IOUtilsTest.testRead">
+    <configuration name="IOUtilsTest.testRead" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.study.utils.IOUtilsTest" />
+      <option name="METHOD_NAME" value="testRead" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IOUtilsTest.testWrite" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.study.utils" />
+      <option name="MAIN_CLASS_NAME" value="com.study.utils.IOUtilsTest" />
+      <option name="METHOD_NAME" value="testWrite" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -180,12 +212,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.IOUtilsTest.testWrite" />
+      <item itemvalue="JUnit.IOUtilsTest.testRead" />
       <item itemvalue="Spring Boot.SpringEserachApplication" />
       <item itemvalue="Spring Boot.SpringbootRedisApplication" />
       <item itemvalue="Spring Boot.SpringBoot01Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IOUtilsTest.testRead" />
+        <item itemvalue="JUnit.IOUtilsTest.testWrite" />
         <item itemvalue="Spring Boot.SpringBoot01Application" />
       </list>
     </recent_temporary>
@@ -220,7 +256,7 @@
       <workItem from="1604216593251" duration="285000" />
       <workItem from="1604278431357" duration="1679000" />
       <workItem from="1604281131623" duration="723000" />
-      <workItem from="1605750129405" duration="2933000" />
+      <workItem from="1605750129405" duration="7007000" />
     </task>
     <task id="LOCAL-00001" summary="update code">
       <created>1596539883442</created>
@@ -250,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605754140598</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update code">
+      <created>1605754367165</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605754367165</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +311,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update code" />
     <option name="LAST_COMMIT_MESSAGE" value="update code" />
   </component>
@@ -276,30 +320,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="96" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1605752100625" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605750510906">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605784324095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605750510906" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605750510906">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605784324095" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605784324094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605750510906" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605750510905">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605784324094" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605784324094">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605750510905" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605750510906">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605784324094" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605784324095">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605750510906" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1605751448515">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605784324095" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1605769286261">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605751448515" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605754144293">
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605769286261" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605754799711">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605754144293" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605754799711" />
     <state x="401" y="22" key="new project wizard" timestamp="1605750192831">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
