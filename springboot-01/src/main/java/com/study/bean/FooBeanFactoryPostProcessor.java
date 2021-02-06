@@ -1,5 +1,6 @@
 package com.study.bean;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -11,14 +12,22 @@ import org.springframework.stereotype.Component;
  * @author sherman
  */
 @Component
+@Slf4j
 public class FooBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
         System.out.println("FooBeanFactoryPostProcessor#postProcessBeanFactory()......");
         System.out.println("BeanDefinitionCount: " + beanFactory.getBeanDefinitionCount());
-        for (String beanDefinitionName : beanFactory.getBeanDefinitionNames()) {
+        //beanFactory.registerResolvableDependency();
+      /*  final String name="entityBean";
+        EntityBean entityBean=new EntityBean();
+        beanFactory.registerSingleton(name,entityBean);
+        log.info("我注册一个bean:{}",beanFactory.getBean(name).toString());
+        *//*for (String beanDefinitionName : beanFactory.getBeanDefinitionNames()) {
             System.out.println(beanDefinitionName);
-        }
+        }*//*
+        beanFactory.destroyScopedBean(name);
+        log.info("我销毁之后的bean:{}",beanFactory.getBean(name).toString());*/
         System.out.println("================end================");
     }
 }

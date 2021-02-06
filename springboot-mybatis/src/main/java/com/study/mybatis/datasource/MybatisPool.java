@@ -1,6 +1,6 @@
 package com.study.mybatis.datasource;
 
-import com.study.mybatis.config.MybatisConfig;
+import com.study.mybatis.config.DatasourceConfig;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.datasource.pooled.PooledDataSource;
@@ -13,17 +13,18 @@ import org.springframework.context.annotation.Configuration;
 @Slf4j
 public class MybatisPool {
 
-    private MybatisConfig mybatisConfig;
+    private DatasourceConfig datasourceConfig;
 
     @Bean
     public PooledDataSource initMybatisPool(){
         PooledDataSource dataSource=new PooledDataSource();
         //log.info("config:{}",JSON.toJSONString(mybatisConfig));
-        dataSource.setDriver(mybatisConfig.getDriverClass());
-        dataSource.setUsername(mybatisConfig.getUsername());
-        dataSource.setUrl(mybatisConfig.getUrl());
-        dataSource.setPassword(mybatisConfig.getPassword());
+        dataSource.setDriver(datasourceConfig.getDriverClass());
+        dataSource.setUsername(datasourceConfig.getUsername());
+        dataSource.setUrl(datasourceConfig.getUrl());
+        dataSource.setPassword(datasourceConfig.getPassword());
         //log.info("datasource:{}", JSON.toJSONString(dataSource));
         return dataSource;
     }
+
 }

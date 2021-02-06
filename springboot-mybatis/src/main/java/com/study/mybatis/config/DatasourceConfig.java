@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties("mybatis.datasource.basename")
 @Data
-public class MybatisConfig {
+public class DatasourceConfig {
     private String url;
     private String username;
     private String password;
