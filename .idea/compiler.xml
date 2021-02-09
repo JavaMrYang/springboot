@@ -10,11 +10,13 @@
         <module name="springboot-mybatis" />
         <module name="spring-eserach" />
         <module name="springboot-redis" />
+        <module name="spring-zk" />
         <module name="springboot-01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="spring-eserach" target="1.8" />
+      <module name="spring-zk" target="1.8" />
       <module name="springboot" target="1.8" />
       <module name="springboot-01" target="1.8" />
       <module name="springboot-mybatis" target="1.8" />
@@ -24,6 +26,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="spring-eserach" options="-parameters" />
+      <module name="spring-zk" options="-parameters" />
       <module name="springboot-01" options="-parameters" />
       <module name="springboot-mybatis" options="-parameters" />
       <module name="springboot-redis" options="-parameters" />

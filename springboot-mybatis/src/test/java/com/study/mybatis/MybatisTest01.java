@@ -22,7 +22,7 @@ public class MybatisTest01 {
     public static void main(String[] args) throws IOException {
         String resource = "mybatis-config.xml";
         InputStream inputStream = Resources.getResourceAsStream(resource);
-        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
+        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream); //构建sqlsession工厂
         SqlSession session= sqlSessionFactory.openSession(); //打开会话
         BlogMapper blogMapper=session.getMapper(BlogMapper.class);
         Blog blog=blogMapper.selectBlog("1");
