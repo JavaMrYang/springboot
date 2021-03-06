@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @desc
  * @date :2021/2/4/004 20:51
  **/
-@ComponentScan(value = {"com.study.demo2"})
+@ComponentScan(value = {"com.study.demo2","com.study.bean"})
 public class SpringTestApp {
     public static void main(String[] args) {
         ConfigurableApplicationContext ac=new AnnotationConfigApplicationContext(BeanConfig.class);

@@ -59,36 +59,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="576897fd-0f4c-4f43-9652-99f756c40594" name="Default Changelist" comment="update code">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_51_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_51_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_16.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_yetus_audience_annotations_0_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_jute_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_25.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-zk/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-zk/spring-zk.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-zk/src/main/java/com.study.zk/WatchDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-zk/src/main/java/com.study.zk/WatchDemo1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-zk/src/main/java/com.study.zk/ZkClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-zk/src/main/java/com.study.zk/ZkPutFileTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spring-zk/src/main/java/com.study.zk/ZkServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="576897fd-0f4c-4f43-9652-99f756c40594" name="Default Changelist" comment="添加zk添加节点，和监听节点变化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-01/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-01/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-01/springboot-01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-01/springboot-01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-mybatis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-mybatis/springboot-mybatis.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springboot-mybatis/src/test/java/com/study/mybatis/MybatisTest01.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-mybatis/src/test/java/com/study/mybatis/MybatisTest01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/SpringBoot01Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/SpringBoot01Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/bean/Blue.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/bean/Blue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/bean/FooBeanDefinitionRegistryPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/bean/FooBeanDefinitionRegistryPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/bean/FooBeanFactoryPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/bean/FooBeanFactoryPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/demo2/SpringTestApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/springboot-01/src/main/java/com/study/demo2/SpringTestApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -148,7 +125,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1604281092226" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8.0_181" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../github/zookeeper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../github/spring-boot" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -170,26 +147,13 @@
       <recent name="D:\ly\springboot\springboot-01\src\main\java\com\study\bean" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ZkClient.createZnode">
-    <configuration name="MybatisTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.study.mybatis.MybatisTest01" />
-      <module name="springboot-mybatis" />
+  <component name="RunManager" selected="Spring Boot.SpringBoot01Application">
+    <configuration name="SpringTestApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.study.demo2.SpringTestApp" />
+      <module name="springboot-01" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.study.mybatis.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ZkPutFileTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.study.zk.ZkPutFileTest" />
-      <module name="spring-zk" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.study.zk.*" />
+          <option name="PATTERN" value="com.study.demo2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -206,6 +170,17 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -241,6 +216,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBoot01Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="springboot-01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.SpringBoot01Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpringEserachApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="spring-eserach" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.springeserach.SpringEserachApplication" />
@@ -256,21 +244,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.MybatisTest01" />
-      <item itemvalue="Application.ZkPutFileTest" />
       <item itemvalue="Application.ZkServer" />
       <item itemvalue="JUnit.ZkClient" />
       <item itemvalue="JUnit.ZkClient.createZnode" />
       <item itemvalue="Spring Boot.SpringEserachApplication" />
       <item itemvalue="Spring Boot.SpringbootRedisApplication" />
+      <item itemvalue="Application.SpringTestApp" />
+      <item itemvalue="Spring Boot.SpringBoot01Application" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SpringBoot01Application" />
+        <item itemvalue="Application.SpringTestApp" />
         <item itemvalue="JUnit.ZkClient.createZnode" />
         <item itemvalue="Application.ZkServer" />
         <item itemvalue="JUnit.ZkClient" />
-        <item itemvalue="Application.ZkPutFileTest" />
-        <item itemvalue="Application.MybatisTest01" />
       </list>
     </recent_temporary>
   </component>
@@ -319,6 +307,8 @@
       <workItem from="1612499643996" duration="4844000" />
       <workItem from="1612587284127" duration="6817000" />
       <workItem from="1612762088117" duration="5853000" />
+      <workItem from="1612858807833" duration="713000" />
+      <workItem from="1615000733269" duration="5326000" />
     </task>
     <task id="LOCAL-00001" summary="update code">
       <created>1596539883442</created>
@@ -376,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612593344546</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加zk添加节点，和监听节点变化">
+      <created>1612858939676</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612858939676</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,9 +394,14 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update code" />
-    <option name="LAST_COMMIT_MESSAGE" value="update code" />
+    <MESSAGE value="添加zk添加节点，和监听节点变化" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加zk添加节点，和监听节点变化" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="599" y="267" key="#com.intellij.debugger.actions.ViewTextAction" timestamp="1615015930527">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="599" y="267" key="#com.intellij.debugger.actions.ViewTextAction/0.0.1536.824@0.0.1536.824" timestamp="1615015930527" />
     <state x="516" y="212" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612592063206">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -412,66 +414,66 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="462" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1612589437942" />
-    <state x="962" y="228" key="#xdebugger.evaluate" timestamp="1607327895824">
+    <state x="552" y="138" key="#xdebugger.evaluate" timestamp="1615016016405">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="962" y="228" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1607327895824" />
+    <state x="552" y="138" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1615016016405" />
     <state width="548" height="464" key="DebuggerActiveHint" timestamp="1607328044402">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="548" height="464" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1607328044402" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1612762174677">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1615015393071">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1612762174677" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1612767902432">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1615015393071" />
+    <state width="1493" height="270" key="GridCell.Tab.0.bottom" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612767902432" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1612767902432">
+    <state width="1493" height="270" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="270" key="GridCell.Tab.0.center" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1612767902432" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1612767902432">
+    <state width="1493" height="270" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="270" key="GridCell.Tab.0.left" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1612767902432" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1612767902432">
+    <state width="1493" height="270" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="270" key="GridCell.Tab.0.right" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1612767902432" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1612767509988">
+    <state width="1493" height="270" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="270" key="GridCell.Tab.1.bottom" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612767509988" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1612767509988">
+    <state width="1493" height="270" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="270" key="GridCell.Tab.1.center" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1612767509988" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1612767509988">
+    <state width="1493" height="270" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="270" key="GridCell.Tab.1.left" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1612767509988" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1612767509988">
+    <state width="1493" height="270" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="270" key="GridCell.Tab.1.right" timestamp="1615016908176">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1612767509988" />
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1612443558581">
+    <state width="1493" height="270" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1615016908176" />
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom" timestamp="1615016632024">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1612443558581" />
-    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1612443558581">
+    <state width="1493" height="261" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1615016632024" />
+    <state width="1493" height="261" key="GridCell.Tab.2.center" timestamp="1615016632023">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1612443558581" />
-    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1612443558581">
+    <state width="1493" height="261" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1615016632023" />
+    <state width="1493" height="261" key="GridCell.Tab.2.left" timestamp="1615016632023">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1612443558581" />
-    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1612443558581">
+    <state width="1493" height="261" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1615016632023" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right" timestamp="1615016632023">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1612443558581" />
+    <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1615016632023" />
     <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1612765423429">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -480,18 +482,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1612767300682" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612593352533">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1612858944322">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612593352533" />
-    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605837601747">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1612858944322" />
+    <state x="468" y="144" width="600" height="536" key="find.popup" timestamp="1615016716422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="573" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605837601747" />
-    <state x="468" y="144" width="600" height="536" key="find.popup" timestamp="1612763696191">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="468" y="144" width="600" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1612763696191" />
+    <state x="468" y="144" width="600" height="536" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1615016716422" />
     <state x="356" y="22" key="new project wizard" timestamp="1612762118698">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -513,6 +511,11 @@
           <url>file://$PROJECT_DIR$/spring-zk/src/main/java/com.study.zk/ZkPutFileTest.java</url>
           <line>78</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/springboot-01/src/main/java/com/study/bean/FooBeanDefinitionRegistryPostProcessor.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

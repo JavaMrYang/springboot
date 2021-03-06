@@ -19,13 +19,19 @@ public class FooBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
         System.out.println("FooBeanFactoryPostProcessor#postProcessBeanFactory()......");
         System.out.println("BeanDefinitionCount: " + beanFactory.getBeanDefinitionCount());
         //beanFactory.registerResolvableDependency();
+        //beanFactory.registerResolvableDependency();
       /*  final String name="entityBean";
         EntityBean entityBean=new EntityBean();
         beanFactory.registerSingleton(name,entityBean);
-        log.info("我注册一个bean:{}",beanFactory.getBean(name).toString());
-        *//*for (String beanDefinitionName : beanFactory.getBeanDefinitionNames()) {
-            System.out.println(beanDefinitionName);
-        }*//*
+        log.info("我注册一个bean:{}",beanFactory.getBean(name).toString());*/
+        for (String beanDefinitionName : beanFactory.getBeanDefinitionNames()) {
+            //System.out.println(beanDefinitionName);
+            if(beanDefinitionName!=null&&beanDefinitionName.toLowerCase().contains("blue")){
+                System.out.println(beanDefinitionName);
+                //log.info(beanDefinitionName);
+            }
+        }
+        /*
         beanFactory.destroyScopedBean(name);
         log.info("我销毁之后的bean:{}",beanFactory.getBean(name).toString());*/
         System.out.println("================end================");
